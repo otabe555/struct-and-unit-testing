@@ -11,6 +11,12 @@ type TaskList struct {
 	list []Task
 }
 
+func CreateNewTasklist() *TaskList {
+	p := new(TaskList)
+	p.list = make([]Task, 0)
+	return p
+
+}
 func (this *TaskList) Create(task *Task) *Task {
 	this.list = append(this.list, *task)
 	return task
