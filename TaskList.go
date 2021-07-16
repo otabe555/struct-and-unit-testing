@@ -18,6 +18,11 @@ func CreateNewTasklist() *TaskList {
 
 }
 func (this *TaskList) Create(task *Task) *Task {
+	for _, element := range this.list {
+		if element.ID == task.ID {
+			return &Task{}
+		}
+	}
 	this.list = append(this.list, *task)
 	return task
 }

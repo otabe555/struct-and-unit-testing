@@ -14,27 +14,22 @@ type ContactManager struct {
 	contacts []Contact
 }
 
-func CreateContactManager() *ContactManager {
+func NewContactManager() *ContactManager {
 	p := new(ContactManager)
 	p.contacts = make([]Contact, 0)
 	return p
 }
 
 func (c *ContactManager) Create(cont *Contact) *Contact {
-	for i := 0; i < len(c.contacts); i++ {
-		if c.contacts[i].ID == cont.ID {
-			return cont
-		}
-	}
 	c.contacts = append(c.contacts, *cont)
-	return &Contact{}
+	return cont
 }
 
 func (c *ContactManager) Update(cont *Contact) *Contact {
-	for i := 0; i < len(c.contacts); i++ {
-		if c.contacts[i].ID == cont.ID {
-			c.contacts[i] = *cont
-			return cont
+	for index, value := range c.contacts {
+		if value.ID == cont.ID {
+			c.contacts[index] = *cont
+			return &c.contacts[index]
 		}
 	}
 	return &Contact{}
