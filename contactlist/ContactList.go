@@ -1,4 +1,4 @@
-package main
+package contactlist
 
 type Contact struct {
 	ID int
