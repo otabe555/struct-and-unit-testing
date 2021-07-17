@@ -7,7 +7,7 @@ import (
 
 var (
 	Persons = []Contact{
-		Contact{
+		{
 			ID:        0,
 			Name:      "Clown",
 			Phone:     "+998937853311",
@@ -16,7 +16,7 @@ var (
 			Email:     "clown@gmail.com",
 			CreatedAt: time.Now().Format(time.UnixDate),
 		},
-		Contact{
+		{
 			ID:        1,
 			Name:      "Kale",
 			Phone:     "+998937853311",
@@ -25,7 +25,7 @@ var (
 			Email:     "clown@gmail.com",
 			CreatedAt: time.Now().Format(time.UnixDate),
 		},
-		Contact{
+		{
 			ID:        2,
 			Name:      "Charli",
 			Phone:     "+009813239120",
@@ -36,7 +36,7 @@ var (
 		},
 	}
 	TestsForContactUpdate = []Contact{
-		Contact{
+		{
 			ID:        0,
 			Name:      "Wick",
 			Phone:     "+998937853311",
@@ -45,7 +45,7 @@ var (
 			Email:     "clown@gmail.com",
 			CreatedAt: time.Now().Format(time.UnixDate),
 		},
-		Contact{
+		{
 			ID:        1,
 			Name:      "Ocean",
 			Phone:     "+998937853311",
@@ -54,7 +54,7 @@ var (
 			Email:     "clown@gmail.com",
 			CreatedAt: time.Now().Format(time.UnixDate),
 		},
-		Contact{
+		{
 			ID:        2,
 			Name:      "Charli",
 			Phone:     "+009813239120",
